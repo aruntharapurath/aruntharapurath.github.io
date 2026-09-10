@@ -182,8 +182,9 @@ h1 span {
 .terminal-input-row { display: flex; align-items: center; gap: 8px; margin-top: 10px; }
 .terminal-input-row label { white-space: nowrap; }
 .terminal-input-row input {
-  flex: 1;
-  min-width: 80px;
+  flex: 0 0 auto;
+  width: 0;
+  min-width: 0;
   border: 0;
   outline: 0;
   padding: 0;
@@ -216,6 +217,43 @@ h1 span {
 .terminal-note span { display: inline-block; margin-top: 10px; font-size: 36px; transform: rotate(20deg); color: white; }
 
 .future-section { min-height: 2px; scroll-margin-top: 92px; }
+
+html.resume-open { overflow: hidden; }
+.resume-dialog {
+  width: min(1100px, calc(100% - 48px));
+  height: 90vh;
+  height: 90dvh;
+  max-width: none;
+  max-height: none;
+  margin: auto;
+  padding: 0;
+  border: 1px solid rgba(55, 164, 255, .55);
+  border-radius: 14px;
+  background: #07192c;
+  color: #eaf2ff;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, .5);
+  overflow: hidden;
+}
+.resume-dialog[open] { display: flex; flex-direction: column; }
+.resume-dialog::backdrop { background: rgba(2, 9, 18, .8); backdrop-filter: blur(5px); }
+.resume-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 22px; }
+.resume-toolbar h2 { margin: 0; font-size: 20px; }
+.resume-actions { display: flex; align-items: center; gap: 12px; }
+.resume-actions .resume-btn { font: inherit; cursor: pointer; }
+.resume-actions .resume-btn:disabled { opacity: .65; cursor: wait; }
+.resume-close { padding: 12px; border: 1px solid #52677c; border-radius: 8px; background: transparent; color: inherit; font: inherit; cursor: pointer; }
+.resume-close:hover { background: #16334e; }
+.resume-dialog :focus-visible { outline: 2px solid #76cfff; outline-offset: 3px; }
+.resume-fallback { margin: 0; padding: 0 22px 16px; font-size: 13px; color: #b9c8dd; }
+.resume-fallback a { color: #76cfff; text-decoration: underline; }
+.resume-preview { display: block; width: 100%; flex: 1; min-height: 0; border: 0; background: #fff; }
+@media (max-width: 720px) {
+  .resume-dialog { width: 100%; height: 100vh; height: 100dvh; border: 0; border-radius: 0; }
+  .resume-toolbar { flex-wrap: wrap; padding: 16px; gap: 12px; }
+  .resume-toolbar h2 { font-size: 18px; }
+  .resume-actions { flex-wrap: wrap; }
+  .resume-fallback { padding: 0 16px 12px; }
+}
 
 @media (max-width: 1050px) {
   .nav-shell { grid-template-columns: 1fr auto; }
