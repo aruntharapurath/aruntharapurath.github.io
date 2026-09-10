@@ -18,6 +18,27 @@ const input = document.getElementById('terminal-input');
 const form = document.getElementById('terminal-form');
 const output = document.getElementById('terminal-output');
 
+let copyEmailTimer;
+document.getElementById('copy-email').addEventListener('click', async () => {
+  const status = document.getElementById('copy-email-status');
+  try {
+    await navigator.clipboard.writeText(document.getElementById('contact-email').textContent);
+    clearTimeout(copyEmailTimer);
+    status.classList.remove('is-copied');
+    status.textContent = 'Email address copied.';
+    void status.offsetWidth;
+    status.classList.add('is-copied');
+    copyEmailTimer = setTimeout(() => {
+      status.textContent = '';
+      status.classList.remove('is-copied');
+    }, 1000);
+  } catch {
+    clearTimeout(copyEmailTimer);
+    status.classList.remove('is-copied');
+    status.textContent = 'Could not copy automatically. Select the email address to copy it.';
+  }
+});
+
 const resumeDialog = document.getElementById('resume-dialog');
 const resumePreview = document.getElementById('resume-preview');
 let resumeTrigger;
