@@ -20,7 +20,6 @@
       <div class="nav-spacer" aria-hidden="true"></div>
       <div class="nav-links">
         <a class="active" href="#home">Home</a>
-        <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#stack">Stack</a>
         <a href="#posts">Posts</a>
@@ -41,7 +40,7 @@
       <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
     </nav>
     <div id="mobile-menu" class="mobile-menu" hidden>
-      <a href="#home">Home</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#stack">Stack</a><a href="#posts">Posts</a><a href="#contact">Contact</a>
+      <a href="#home">Home</a><a href="#experience">Experience</a><a href="#stack">Stack</a><a href="#posts">Posts</a><a href="#contact">Contact</a>
       <a href="https://github.com/aruntharapurath" target="_blank" rel="noreferrer">GitHub ↗</a>
       <a href="https://www.linkedin.com/in/aruntharapurath" target="_blank" rel="noreferrer">LinkedIn ↗</a>
       <a href="Arun_Thara_Purath_Resume.pdf" data-resume aria-haspopup="dialog" aria-controls="resume-dialog">Resume</a>
@@ -87,9 +86,88 @@
       </div>
     </section>
 
-    <section id="about" class="future-section" aria-label="About section placeholder"></section>
-    <section id="experience" class="future-section" aria-label="Experience section placeholder"></section>
-    <section id="stack" class="future-section" aria-label="Stack section placeholder"></section>
+    <div class="career-layout">
+      <section id="experience" class="career-panel experience-panel" aria-labelledby="experience-title">
+        <p class="section-kicker">THE JOURNEY</p>
+        <h2 id="experience-title">Experience</h2>
+        <ol class="experience-timeline">
+          <li>
+            <p class="experience-date">2023 – Present</p>
+            <h3>Intelex Technologies</h3>
+            <p class="experience-role">Senior Software Engineer</p>
+          </li>
+          <li>
+            <p class="experience-date">2016 – 2023</p>
+            <h3>Tata Elxsi</h3>
+            <p class="experience-role">Specialist</p>
+          </li>
+          <li>
+            <p class="experience-date">2014 – 2016</p>
+            <h3>Peepal Software</h3>
+            <p class="experience-role">Software Engineer</p>
+          </li>
+        </ol>
+      </section>
+      <section id="stack" class="career-panel stack-panel" aria-labelledby="stack-title">
+        <p class="section-kicker">TOOLS OF THE TRADE</p>
+        <h2 id="stack-title">My stack</h2>
+        <div class="stack-groups">
+          <section class="tech-group" aria-labelledby="tech-group-0">
+            <h3 id="tech-group-0">Backend &amp; APIs</h3>
+            <ul class="tech-grid">
+              <li class="tech-tile"><img src="assets/tech/dotnetcore.svg" alt="" width="32" height="32" loading="lazy" /><span>C# / .NET</span></li>
+              <li class="tech-tile"><img src="assets/tech/nodejs.svg" alt="" width="32" height="32" loading="lazy" /><span>Node.js</span></li>
+              <li class="tech-tile"><img src="assets/tech/python.svg" alt="" width="32" height="32" loading="lazy" /><span>Python</span></li>
+              <li class="tech-tile"><img src="assets/tech/graphql.svg" alt="" width="32" height="32" loading="lazy" /><span>GraphQL</span></li>
+            </ul>
+          </section>
+          <section class="tech-group" aria-labelledby="tech-group-1">
+            <h3 id="tech-group-1">Frontend</h3>
+            <ul class="tech-grid">
+              <li class="tech-tile"><img src="assets/tech/javascript.svg" alt="" width="32" height="32" loading="lazy" /><span>JavaScript</span></li>
+              <li class="tech-tile"><img src="assets/tech/typescript.svg" alt="" width="32" height="32" loading="lazy" /><span>TypeScript</span></li>
+              <li class="tech-tile"><img src="assets/tech/angularjs.svg" alt="" width="32" height="32" loading="lazy" /><span>Angular</span></li>
+              <li class="tech-tile"><img src="assets/tech/react.svg" alt="" width="32" height="32" loading="lazy" /><span>React</span></li>
+            </ul>
+          </section>
+          <section class="tech-group" aria-labelledby="tech-group-2">
+            <h3 id="tech-group-2">Cloud &amp; DevOps</h3>
+            <ul class="tech-grid">
+              <li class="tech-tile"><img src="assets/tech/azure.svg" alt="" width="32" height="32" loading="lazy" /><span>Azure</span></li>
+              <li class="tech-tile"><img src="assets/tech/amazonwebservices.svg" alt="" width="32" height="32" loading="lazy" /><span>AWS</span></li>
+              <li class="tech-tile"><img src="assets/tech/googlecloud.svg" alt="" width="32" height="32" loading="lazy" /><span>Google Cloud</span></li>
+              <li class="tech-tile"><img src="assets/tech/docker.svg" alt="" width="32" height="32" loading="lazy" /><span>Docker</span></li>
+              <li class="tech-tile"><img src="assets/tech/kubernetes.svg" alt="" width="32" height="32" loading="lazy" /><span>Kubernetes</span></li>
+              <li class="tech-tile"><img src="assets/tech/terraform.svg" alt="" width="32" height="32" loading="lazy" /><span>Terraform</span></li>
+              <li class="tech-tile"><img src="assets/tech/azuredevops.svg" alt="" width="32" height="32" loading="lazy" /><span>Azure DevOps</span></li>
+            </ul>
+          </section>
+          <section class="tech-group" aria-labelledby="tech-group-3">
+            <h3 id="tech-group-3">Data &amp; Messaging</h3>
+            <ul class="tech-grid">
+              <li class="tech-tile"><img src="assets/tech/microsoftsqlserver.svg" alt="" width="32" height="32" loading="lazy" /><span>SQL Server</span></li>
+              <li class="tech-tile"><img src="assets/tech/postgresql.svg" alt="" width="32" height="32" loading="lazy" /><span>PostgreSQL</span></li>
+              <li class="tech-tile"><img src="assets/tech/mongodb.svg" alt="" width="32" height="32" loading="lazy" /><span>MongoDB</span></li>
+              <li class="tech-tile"><img src="assets/tech/cosmosdb.svg" alt="" width="32" height="32" loading="lazy" /><span>Cosmos DB</span></li>
+              <li class="tech-tile"><img src="assets/tech/redis.svg" alt="" width="32" height="32" loading="lazy" /><span>Redis</span></li>
+              <li class="tech-tile"><img src="assets/tech/apachekafka.svg" alt="" width="32" height="32" loading="lazy" /><span>Kafka</span></li>
+              <li class="tech-tile"><span class="tech-monogram" aria-hidden="true">MQTT</span><span>MQTT</span></li>
+            </ul>
+          </section>
+          <section class="tech-group" aria-labelledby="tech-group-ai">
+            <h3 id="tech-group-ai">AI &amp; Blockchain</h3>
+            <ul class="tech-grid">
+              <li class="tech-tile"><img src="assets/tech/promptflow.png" alt="" width="32" height="32" loading="lazy" /><span>Microsoft Prompt Flow</span></li>
+              <li class="tech-tile"><img src="assets/tech/claude.png" alt="" width="32" height="32" loading="lazy" /><span>Claude</span></li>
+              <li class="tech-tile"><img src="assets/tech/codex.svg" alt="" width="32" height="32" loading="lazy" /><span>Codex</span></li>
+              <li class="tech-tile"><span class="tech-monogram" aria-hidden="true">&gt;_</span><span>Prompt Engineering</span></li>
+              <li class="tech-tile"><span class="tech-monogram" aria-hidden="true">ETH</span><span>Ethereum</span></li>
+              <li class="tech-tile"><img src="assets/tech/solidity.svg" alt="" width="32" height="32" loading="lazy" /><span>Solidity</span></li>
+            </ul>
+          </section>
+        </div>
+      </section>
+    </div>
     <section id="posts" class="future-section" aria-label="Posts section placeholder"></section>
     <section id="contact" class="future-section" aria-label="Contact section placeholder"></section>
   </main>

@@ -88,14 +88,6 @@ function resizeInput() {
 
 input?.addEventListener('input', resizeInput);
 
-const routes = {
-  about: '#about',
-  experience: '#experience',
-  stack: '#stack',
-  posts: '#posts',
-  contact: '#contact'
-};
-
 function runCommand(rawCommand) {
   const command = rawCommand.trim().toLowerCase();
   if (!command) return;
@@ -137,38 +129,19 @@ building reliable systems that scale.
 2023 → Present
 Intelex Technologies
 Senior Software Engineer
-Cloud SaaS · .NET · Azure · AI · Angular · GraphQL
 
 2016 → 2023
 Tata Elxsi
 Specialist
-Microservices · .NET · Kubernetes · Kafka · Redis · MongoDB
 
 2014 → 2016
 Peepal Software
 Software Engineer
-Linux · Python · Monitoring · Automation
   `,
 
-  stack: `
-Backend
-  C# · .NET · ASP.NET Core · REST · GraphQL
-
-Architecture
-  Microservices · Distributed Systems · Serverless
-
-Cloud & DevOps
-  Azure · AWS · Docker · Kubernetes · Terraform · CI/CD
-
-Data & Messaging
-  SQL Server · MongoDB · CosmosDB · Redis · Kafka · MQTT
-
-Frontend
-  Angular · React · TypeScript · JavaScript
-
-AI & Automation
-  Microsoft Prompt Flow · Prompt Engineering
-  `,
+  stack: Array.from(document.querySelectorAll('.tech-group'), group =>
+    `${group.querySelector('h3').textContent}\n  ${Array.from(group.querySelectorAll('.tech-tile > span:last-child'), label => label.textContent).join(' · ')}`
+  ).join('\n\n'),
 
   posts: `
 I write about things I learn and build:
@@ -214,9 +187,6 @@ opportunities and interesting engineering problems.
 
   output.textContent = responses[command] ?? `command not found: ${command}`;
 
-  if (routes[command] && document.querySelector(routes[command])) {
-    setTimeout(() => document.querySelector(routes[command]).scrollIntoView({ behavior: 'smooth' }), 180);
-  }
 }
 
 form?.addEventListener('submit', (event) => {

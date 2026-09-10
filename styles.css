@@ -207,6 +207,71 @@ h1 span {
 
 .future-section { min-height: 2px; scroll-margin-top: 92px; }
 
+.career-layout {
+  width: min(100% - 64px, 1280px);
+  margin: 0 auto 96px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  gap: 24px;
+}
+.career-panel {
+  min-width: 0;
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: linear-gradient(145deg, rgba(8, 26, 44, .95), rgba(5, 17, 30, .95));
+  scroll-margin-top: 108px;
+}
+.section-kicker { margin: 0 0 10px; color: var(--cyan); font: 11px var(--mono); letter-spacing: .14em; }
+.career-panel h2 { margin: 0 0 32px; font-size: 28px; font-weight: 600; letter-spacing: -.03em; }
+.experience-timeline { position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); list-style: none; padding: 0; margin: 42px 0 12px; }
+.experience-timeline::before { content: ''; position: absolute; top: 7px; left: 16.6667%; right: 16.6667%; height: 1px; background: rgba(67, 199, 255, .55); }
+.experience-timeline li { position: relative; padding: 38px 12px 0; text-align: center; }
+.experience-timeline li::before { content: ''; position: absolute; left: calc(50% - 7px); top: 0; width: 15px; height: 15px; border: 1px solid var(--cyan); border-radius: 50%; background: #0b263b; }
+.experience-timeline li:first-child::before { background: var(--cyan); box-shadow: 0 0 14px rgba(67, 199, 255, .4); }
+.experience-date { margin: 0 0 12px; color: #9baec7; font: 12px var(--mono); }
+.experience-timeline h3 { margin: 0 0 8px; font-size: 20px; font-weight: 600; }
+.experience-role { margin: 0; color: #8edbff; font-size: 14px; line-height: 1.6; }
+.stack-groups { display: grid; }
+.tech-group { display: grid; grid-template-columns: 168px minmax(0, 1fr); align-items: center; gap: 24px; padding: 20px 0; border-top: 1px solid rgba(77, 163, 255, .18); }
+.tech-group:last-child { padding-bottom: 0; }
+.tech-group h3 { margin: 0; font-size: 14px; font-weight: 500; color: #bbccdf; }
+.tech-grid { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; margin: 0; }
+.tech-tile { min-width: 0; min-height: 54px; display: flex; align-items: center; gap: 10px; padding: 12px 14px; border: 1px solid rgba(77, 163, 255, .24); border-radius: 8px; background: rgba(8, 26, 43, .55); transition: border-color .18s ease, background .18s ease, transform .18s ease; }
+.tech-tile:hover { border-color: rgba(67, 199, 255, .7); background: rgba(13, 46, 67, .75); transform: translateY(-2px); }
+.tech-tile > span:last-child { color: #d7e3f1; font-size: 13px; line-height: 1.45; text-align: left; }
+.tech-tile img { width: 26px; height: 26px; object-fit: contain; flex-shrink: 0; }
+.tech-tile img[src$="codex.svg"] { filter: brightness(0) invert(1); }
+.tech-tile img[src$="amazonwebservices.svg"], .tech-tile img[src$="dotnetcore.svg"] { filter: brightness(1.8); }
+.tech-tile img[src$="apachekafka.svg"], .tech-tile img[src$="oauth.svg"], .tech-tile img[src$="solidity.svg"] { filter: brightness(0) invert(.9); }
+.tech-monogram { flex-shrink: 0; width: 26px; height: 26px; display: grid; place-items: center; border-radius: 7px; background: #17364e; color: #8edbff; font: 11px var(--mono); }
+@media (max-width: 900px) {
+  .career-layout { width: calc(100% - 32px); }
+  .career-panel { padding: 24px; }
+  .tech-group { grid-template-columns: 140px minmax(0, 1fr); gap: 16px; }
+}
+@media (max-width: 640px) {
+  .experience-timeline { display: block; padding-left: 26px; margin: 32px 0 8px 7px; border-left: 1px solid rgba(67, 199, 255, .35); }
+  .experience-timeline::before { display: none; }
+  .experience-timeline li { padding: 0 0 36px; text-align: left; }
+  .experience-timeline li:last-child { padding-bottom: 0; }
+  .experience-timeline li::before { left: -34px; top: 0; }
+  .tech-group { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .tech-tile { padding: 10px 12px; min-height: 48px; }
+}
+@media (max-width: 400px) {
+  .career-panel { padding: 20px 16px; }
+  .tech-grid { gap: 8px; }
+  .tech-tile { gap: 8px; padding: 10px; }
+  .tech-tile > span:last-child { font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .tech-tile { transition: none; }
+  .tech-tile:hover { transform: none; }
+}
+
 html.resume-open { overflow: hidden; }
 .resume-dialog {
   width: min(1100px, calc(100% - 48px));
