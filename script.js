@@ -112,7 +112,10 @@ Available commands:
   github       Open my GitHub
   resume       View or download my resume
   contact      Get in touch
+  coffee       ???
   `,
+
+  coffee: '☕ Coffee ready.',
 
   about: `
 Hi, I'm Arun 👋
