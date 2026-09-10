@@ -75,13 +75,15 @@
             <button data-command="coffee">coffee</button><span>???</span>
           </div>
           <div class="terminal-output" id="terminal-output" aria-live="polite"></div>
+          <div class="terminal-entry">
           <form id="terminal-form" class="terminal-input-row">
             <label for="terminal-input"><span class="prompt">arun@portfolio</span>:~$</label>
-            <input id="terminal-input" autocomplete="off" spellcheck="false" aria-label="Terminal command" />
+            <input id="terminal-input" autocomplete="off" spellcheck="false" aria-label="Terminal command" aria-describedby="terminal-hint" />
             <span class="cursor" aria-hidden="true"></span>
           </form>
+          <p id="terminal-hint" class="terminal-hint">Type a command or click one above</p>
+          </div>
         </div>
-        <div class="terminal-note" aria-hidden="true">Type ‘help’<br>to get started! <span>↙</span></div>
       </div>
     </section>
 
